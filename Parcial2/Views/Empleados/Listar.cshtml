@@ -1,0 +1,40 @@
+﻿@using Parcial2.Entidades
+@model List<Empleado>
+
+@{
+    ViewBag.Title = "Listar";
+}
+
+<h2>Listar</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NOMBRE</th>
+            <th>APELLIDO</th>
+            <th>EDAD</th>
+            <th>ID EMPRESA</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var empleados in Model)
+        {
+        <tr>
+            <td>@empleados.Id</td>
+            <td>@empleados.Nombre</td>
+            <td>@empleados.Apellido</td>
+            <td>@empleados.Edad</td>
+            <td>@empleados.Id_Empresa</td>
+            <td><a class="btn btn-warning" href="~/Empleados/Modificacion/@empleados.Id">Modificar Empleado</a></td>
+            <td><a class="btn btn-danger" href="~/Empleados/Baja/@empleados.Id">Eliminar Empleado</a></td>
+        </tr>
+        }
+    </tbody>
+
+</table>
+<a class="btn btn-success" href="~/Empleados/Alta">Alta EMPLEADO</a> 
+<a class="btn btn-primary" href="~/Empresas/Alta">Alta EMPRESA</a>

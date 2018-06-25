@@ -1,0 +1,17 @@
+﻿@using Parcial2.Entidades
+@model Empresa
+
+@{
+  ViewBag.Title = "Alta";
+}
+
+<h2>Alta</h2>
+
+<form action="@Url.Content("~/Empresas/Alta")" method="post">
+
+    NOMBRE: <input class="input-sm" name="Nombre" /><br />
+    DIRECCION: <input class="input-sm" name="Direccion" /><br />
+    CIUDAD: <input class="input-sm" name="Ciudad" /><br />
+
+    <button class="btn btn-success" type="submit">Alta de Empresa</button>
+</form>

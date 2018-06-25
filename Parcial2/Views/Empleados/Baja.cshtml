@@ -1,0 +1,18 @@
+﻿@using Parcial2.Entidades
+@model Empleado
+
+@{
+    ViewBag.Title = "Baja";
+}
+
+<h2>Baja</h2>
+
+<form action="@Url.Content("~/Empleados/Baja")" method="post">
+
+    ID: <input class="input-sm" name="Id" value="@Model.Id" readonly/> <br />
+    NOMBRE: <input class="input-sm" name="Nombre" value="@Model.Nombre" readonly/><br />
+    APELLIDO: <input class="input-sm" name="Apellido" value="@Model.Apellido" readonly/><br />
+    EDAD: <input class="input-sm" name="Edad" value="@Model.Edad" readonly/><br />
+
+    <button class="btn btn-danger" type="submit">Confirmar baja</button>
+</form>

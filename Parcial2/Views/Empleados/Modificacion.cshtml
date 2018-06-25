@@ -1,0 +1,19 @@
+﻿@using Parcial2.Entidades
+@model Empleado
+
+@{
+    ViewBag.Title = "Modificacion";
+}
+
+<h2>Modificacion</h2>
+
+<form action="@Url.Content("~/Empleados/Modificacion")" method="post">
+
+    ID: <input class="input-sm" name="Id" value="@Model.Id"  /> <br />
+    NOMBRE: <input class="input-sm" name="Nombre" value="@Model.Nombre"  /><br />
+    APELLIDO: <input class="input-sm" name="Apellido" value="@Model.Apellido"  /><br />
+    EDAD: <input class="input-sm" name="Edad" value="@Model.Edad"  /><br />
+
+    <button type="submit">Modificar</button>
+</form>
+

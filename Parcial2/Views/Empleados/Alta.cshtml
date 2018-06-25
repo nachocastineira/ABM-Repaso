@@ -1,0 +1,25 @@
+﻿@using Parcial2.Entidades
+@using Parcial2.Servicios
+@model List<Empresa>
+
+@{
+    ViewBag.Title = "Alta";
+}
+
+<h2>Alta</h2>
+
+<form action="@Url.Content("~/Empleados/Alta")" method="post">
+
+    NOMBRE: <input class="input-sm" name="Nombre" /><br />
+    APELLIDO: <input class="input-sm" name="Apellido" /><br />
+    EDAD: <input class="input-sm" name="Edad" /><br />
+    EMPRESA: <select class="input-sm" name="Id_Empresa">
+                @foreach (var empresas in Model)
+                {
+                    <option value="@empresas.Id">@empresas.Nombre</option>
+                }
+             </select>
+    <br />
+
+    <button  class="btn btn-success" type="submit">Dar de alta</button>
+</form>
